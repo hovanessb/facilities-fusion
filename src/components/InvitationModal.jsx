@@ -2,9 +2,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 import { CheckArrowIcon } from "../assets/icons/CheckArrowIcon";
 import { CloseIcon } from "../assets/icons/CloseIcon";
-import { TailcastLogo } from "../assets/logos/TailcastLogo";
+import FacilitiesLogo  from "../assets/logos/facilitiesfusionlogo.webp";
 
-import { Form } from "../components/Form.jsx";
+import InquiryForm  from "./Form.tsx";
 export const InvitationModal = ({ setIsOpen }) => (
   <AnimatePresence>
     <motion.div
@@ -22,7 +22,7 @@ export const InvitationModal = ({ setIsOpen }) => (
           onClick={(e) => e.stopPropagation()}
         >
           <div className="flex relative">
-            <div className="w-1/2 hidden lg:inline">
+            <div className="w-1/3 hidden lg:inline">
               <h2 className="mt-6 mb-2 text-5xl font-bold tracking-normal text-white">
                 Contact Us
               </h2>
@@ -45,18 +45,8 @@ export const InvitationModal = ({ setIsOpen }) => (
                 </li>
               </ul>
             </div>
-            <div className="w-full lg:w-1/2 flex items-center flex-col justify-center pt-24 sm:pt-0">
-              <div className="flex inline lg:hidden justify-start items-center grow basis-0 mb-8 pr-6">
-                <div className="text-white mr-2 text-8xl">
-                  <TailcastLogo />
-                </div>
-                <div className="text-white font-['myFont'] font-bold text-3xl">
-                  Tailcast
-                </div>
-              </div>
-              <div className="flex flex-wrap -m-2">
-                <Form />
-              </div>
+            <div className="w-full lg:w-2/3 flex items-center flex-col justify-center pt-24 sm:pt-0">
+                <InquiryForm />
             </div>
             <div
               className="fixed top-6 right-6 z-50 w-5 h-5 cursor-pointer"

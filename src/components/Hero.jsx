@@ -2,7 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 
 import { InvitationModal } from "./InvitationModal";
-import dashboard from "../assets/images/dashboard.jpg";
+
+import dashboard from "../assets/images/hall-roof-2560454_1280.jpg";
 
 export const Hero = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -39,7 +40,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
         >
-          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-12 sm:px-48 ">
+          <div className="text-customGrayText text-sm lg:text-base xl:text-lg sm:text-base mt-10 px-4 sm:px-24 ">
           At Facilities Fusion, we understand that maintaining your property is not just about appearances; it's about protecting your investments, ensuring the safety and comfort of your occupants, and optimizing the efficiency of your operations. With a commitment to excellence, we offer a comprehensive range of building maintenance and facility management services that allow you to focus on what you do best—running your business.
           </div>
         </motion.div>
@@ -65,8 +66,8 @@ export const Hero = () => {
           <div className="relative w-screen flex justify-center ">
             <img
               src={dashboard.src}
-              alt="123"
-              className="w-4/5 2xl:w-[1200px] mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
+              alt="grungy-roof-top"
+              className="w-4/5 2xl:w-[1200px] max-h-fit mx-auto absolute z-10 rounded-xl custom-border-gray hero-dashboard-border-gradient lg:top-6 xl:top-0"
             />
           </div>
         </motion.div>

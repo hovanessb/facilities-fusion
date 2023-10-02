@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Form } from "../components/Form.jsx";
+import InquiryForm from "./Form.tsx";
 
 export const Contact = () => (
   <section className="w-full flex justify-center pt-10 mb-16 lg:mb-32 bg-customDarkBg2 relative">
@@ -17,7 +17,7 @@ export const Contact = () => (
         <div className="custom-block-big-title text-center mb-16 px-8 sm:px-24 md:px-48">
           Lets Work Together
         </div> 
-        <Form />
+        <InquiryForm />
       </motion.div>
     </div>
   </section>
