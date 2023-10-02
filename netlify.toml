@@ -15,7 +15,10 @@
   
   [plugin.inputs]
     enable = false
-    
+  
+  [[plugins]]
+   package = "@netlify/plugin-emails"
+   
 [[redirects]]
   from = "/api/*" # simplify all calls to serverless functions
   to = "/.netlify/functions/:splat" # all function calls will go to this path
