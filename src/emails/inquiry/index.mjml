@@ -1,0 +1,14 @@
+<mjml>
+  <mj-body>
+    <mj-section>
+      <mj-column>
+        <mj-image width="100px" src="https://facilitiesfusion.com/blue-logo.png"></mj-image>
+        <mj-divider border-color="#061c27ff"></mj-divider>
+        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">Inquiry Data:</mj-text>
+        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">Name: {{name}} - Org: {{org}}</a></mj-text>
+        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">email: {{email}} - Phone: {{phone}}</a></mj-text>
+        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">Data: {{data}}</a></mj-text>
+      </mj-column>
+    </mj-section>
+  </mj-body>
+</mjml>

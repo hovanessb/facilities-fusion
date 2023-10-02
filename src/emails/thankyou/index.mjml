@@ -2,10 +2,10 @@
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-image width="100px" src="/blue-logo.png"></mj-image>
+        <mj-image width="100px" src="https://facilitiesfusion.com/blue-logo.png"></mj-image>
         <mj-divider border-color="#061c27ff"></mj-divider>
         <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">Thank you for your inquiry. We will get back to you as soon as possible.</mj-text>
-        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">- Facilities Fusion Team</mj-text>
+        <mj-text font-size="20px" color="#061c27ff" font-family="helvetica">- <a href="https://facilitiesfusion.com">Facilities Fusion Team</a></mj-text>
       </mj-column>
     </mj-section>
   </mj-body>

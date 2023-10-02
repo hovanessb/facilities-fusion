@@ -6,6 +6,10 @@ export default function InquiryForm() {
     const [isError, setError] = useState(false);
     let error = 0
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+      const button = document.getElementById('submit-btn');
+      if(button != null){
+        button.style.display = 'none';
+      }
       event.preventDefault();
       const target = event.target as typeof event.target & {
         fullName: { value: string };
@@ -23,7 +27,7 @@ export default function InquiryForm() {
         data: target.data.value
       };
       //call to the Netlify Function you created`
-      const result = await fetch(  "/.netlify/functions/emails/thankyou", {
+      const result = await fetch(  "/.netlify/functions/thankyou", {
         method: "POST",
         body: JSON.stringify(dataBody),
       });
@@ -56,7 +60,7 @@ export default function InquiryForm() {
               <input className="px-4 py-4 w-full text-gray-500 font-medium  last: placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"  placeholder="Email" id="email" type="email" name="email" required />
               <input className="px-4 py-4 w-full text-gray-500 font-medium  last: placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"  placeholder="Phone" id="phone" type="phone" name="phone"  />
               <textarea className="px-4 py-4 w-full text-gray-500 font-medium   placeholder-gray-500 outline-none border bg-gray-300 border-gray-300 rounded-lg focus:ring focus:ring-indigo-300"  placeholder="Describe your needs" id="data" wrap="soft" name="data" required></textarea>
-              <button type="submit" style={{backgroundColor: '#29f8c8ff'}} className="w-[210px] h-12 custom-button-colored mr-10">Submit</button>
+              <button type="submit" id="submit-btn" style={{backgroundColor: '#29f8c8ff'}} className="w-[210px] h-12 custom-button-colored mr-10">Submit</button>
               </form>  ) }
               {isFormModalOpen && !isError && 
                 (<AnimatePresence>
