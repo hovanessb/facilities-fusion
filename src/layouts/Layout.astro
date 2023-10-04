@@ -2,6 +2,7 @@
 import '@fontsource-variable/work-sans';
 import '@fontsource-variable/big-shoulders-inline-text';
 import { ViewTransitions } from 'astro:transitions';
+import { SEO } from "astro-seo";
 
 export interface Props {
   title: string;
@@ -12,16 +13,28 @@ const { title } = Astro.props;
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <meta
-      name="description"
-      content="Dark themed website template built on AstroJS, designed for technological startup business."
-    />
-    <title>{title}</title>
+  <head> 
+    <meta charset="UTF-8">
+    <SEO
+    title={title}
+    description="Facilities maintenance, repair, HVAC, preventive equipment maintenance for San Jose and the Bay Area"
+    openGraph={{
+      basic: {
+        title: "Facilities Fusion",
+        type: "website",
+        url: "https://facilitiesfusion.com/",
+        image: "https://facilitiesfusion.com/FacilitiesFusioncColorLogo.webp",
+    }}},
+      extend={{
+      // extending the default link tags
+      link: [{ rel: "icon", href: "/favicon.ico" }],
+      // extending the default meta tags
+      meta: [
+        { name: "generator", content: Astro.generator },
+        { name: "viewport", content:"width=device-width"}
+      ],
+    }}
+  />
     <ViewTransitions />
   </head>
   <body>

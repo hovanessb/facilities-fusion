@@ -26,7 +26,7 @@ export const Navbar = () => {
           <a className="navbar-link" href="#home" aria-label="Home">
             <div className="flex justify-start items-center grow basis-0">
               <div className="text-white mr-2  m-1 text-6xl">
-                <img height="50px" width="100px" src={FacilitiesFusionLogo.src} />
+                <img height="50px" width="100px" alt="logo" src={FacilitiesFusionLogo.src} />
               </div>
               <div className="text-customSecondary font-mono pt-6 font-bold text-3xl leading-[.50] text-center">
                 FACILITIES FUSION<br /><span class="font-sans pl-[4px] text-customPrimary font-light text-xs tracking-[.29rem]">FACILITIES REFINED</span>
